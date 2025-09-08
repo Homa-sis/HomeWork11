@@ -22,15 +22,15 @@ public class Main {
 
     public static int writeDistances(int deliveryDistance) {
         int temp = 1;
-        if (deliveryDistance > 100) {
+        if (deliveryDistance >= 100) {
             return temp -1;
-        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
-            temp += 2;
+        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            temp = temp + 1 + 1;
             return temp;
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            temp += 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            temp = temp +1;
             return temp;
-        } else if (deliveryDistance < 20) {
+        } else if (deliveryDistance <= 20) {
             return temp;
         }
         return temp;
@@ -48,7 +48,7 @@ public class Main {
         printingTheLink(clientOS, clientDeviceYear);
 
         System.out.println("Задача 3");
-            int dileveryDays = writeDistances(101);
+            int dileveryDays = writeDistances(19);
             System.out.println("Потребуется дней: " + dileveryDays);
     }
 }
