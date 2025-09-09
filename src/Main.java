@@ -24,13 +24,13 @@ public class Main {
         int temp = 1;
         if (deliveryDistance >= 100) {
             return temp -1;
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             temp = temp + 1 + 1;
             return temp;
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
             temp = temp +1;
             return temp;
-        } else if (deliveryDistance <= 20) {
+        } else if (deliveryDistance < 20) {
             return temp;
         }
         return temp;
